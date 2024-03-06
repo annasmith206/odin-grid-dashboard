@@ -18,8 +18,10 @@ body {
 }
 
 .content>* {
-    padding: 30px;
+    padding: 20px;
 }
+
+
 
 nav {
     background-color: var(--main-color);
@@ -32,6 +34,21 @@ header {
 
 main {
     background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
+.card {
+    background-color: var(--card-color);
+    padding: 20px;
+}
+
+.projects {
+    grid-row: span 2;
+}
+
+main > section {
+    margin: 10px;
+}
 
