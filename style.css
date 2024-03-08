@@ -62,6 +62,9 @@ nav > .title {
 
 header {
     background-color: var(--card-color); 
+}
+
+.search-grid {
     display: grid;
     grid-template-columns: 25px 6fr 25px 45px 1fr;
     align-items: center;
@@ -74,12 +77,24 @@ header {
     border-radius: 50px;
 }
 
-header > input {
+.search-grid > input {
     border-radius: 5rem;
     padding: 4px 10px;
     border: none;
     background-color: var(--background-color);
     margin-right: 20px;
+}
+
+.user-welcome {
+    margin-top: 20px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 60px auto;
+    align-items: center;
+}
+
+.user-welcome .profile-photo {
+    width: 60px;
 }
 
 main {
