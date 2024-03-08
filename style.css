@@ -7,7 +7,7 @@
 :root {
     --main-color : rgb(0, 156, 218);
     --accent-color : rgb(255, 225, 0);
-    --background-color: rgb(200, 200, 200);
+    --background-color: rgb(199, 205, 207);
     --card-color: white;
 }
 
@@ -57,10 +57,29 @@ nav > .nav-section {
 
 nav > .title {
     grid-template-columns: 40px auto;
+    grid-template-rows: auto auto;
 }
 
 header {
     background-color: var(--card-color); 
+    display: grid;
+    grid-template-columns: 25px 6fr 25px 45px 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-photo {
+    width: 45px;
+    height: auto;
+    border-radius: 50px;
+}
+
+header > input {
+    border-radius: 5rem;
+    padding: 4px 10px;
+    border: none;
+    background-color: var(--background-color);
+    margin-right: 20px;
 }
 
 main {
