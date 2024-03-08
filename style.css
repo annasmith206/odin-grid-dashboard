@@ -6,6 +6,7 @@
 
 :root {
     --main-color : rgb(0, 156, 218);
+    --main-color-hover : rgb(0, 137, 190);
     --accent-color : rgb(255, 225, 0);
     --background-color: rgb(199, 205, 207);
     --card-color: white;
@@ -29,6 +30,20 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+}
+
+button {
+    background-color: var(--main-color);
+    color: var(--card-color);
+    border: none;
+    border-radius: 50px;
+    font-size: .9rem;
+    font-weight: bold;
+    padding: 8px 20px;
+}
+
+button:hover {
+    background-color: var(--main-color-hover);
 }
 
 nav {
@@ -77,6 +92,13 @@ header {
     border-radius: 50px;
 }
 
+.action-bar-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: minmax(250px, auto) 300px;
+    align-items: center;
+}
+
 .search-grid > input {
     border-radius: 5rem;
     padding: 4px 10px;
@@ -85,8 +107,13 @@ header {
     margin-right: 20px;
 }
 
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
 .user-welcome {
-    margin-top: 20px;
     display: grid;
     gap: 15px;
     grid-template-columns: 60px auto;
@@ -96,6 +123,8 @@ header {
 .user-welcome .profile-photo {
     width: 60px;
 }
+
+
 
 main {
     background-color: var(--background-color);
