@@ -7,13 +7,15 @@
 :root {
     --main-color : rgb(0, 156, 218);
     --main-color-hover : rgb(0, 137, 190);
-    --accent-color : rgb(255, 225, 0);
-    --background-color: rgb(199, 205, 207);
+    --accent-color : rgb(255, 221, 0);
+    --background-color: rgb(234, 244, 250);
+    --paragraph-text-color: rgb(108, 108, 108);
     --card-color: white;
 }
 
 body {
     margin: 0;
+    background-color: var(--background-color);
 }
 
 .content {
@@ -30,6 +32,11 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+}
+
+p {
+    color: var(--paragraph-text-color);
+    font-size: .85rem;
 }
 
 button {
@@ -77,6 +84,7 @@ nav > .title {
 
 header {
     background-color: var(--card-color); 
+    box-shadow: rgb(100 100 111 / 14%) 3px 3px 2px 0px;
 }
 
 .search-grid {
@@ -124,20 +132,19 @@ header {
     width: 60px;
 }
 
-
-
 main {
-    background-color: var(--background-color);
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
+    overflow: scroll;
 }
 
 .card {
     background-color: var(--card-color);
-    padding: 15px;
+    padding: 20px;
     border-radius: 5px;
+    box-shadow: rgb(100 100 111 / 14%) 3px 3px 2px 0px;
 }
 
 .project-section {
@@ -147,8 +154,29 @@ main {
 .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 15px;
+    grid-template-rows: repeat(minmax(300, auto), 3);
+    column-gap: 25px;
+}
+
+.project-grid > .card {
+    border-left: 8px solid var(--accent-color);
+    padding-right: 24px;
+    display: grid;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+.project-icons {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 20px 20px 20px;
+    justify-self: end;
+    align-self: end;
+}
+
+.project-icons > img {
+    width: 20px;
+    height: auto;
 }
 
 .announcements-grid {
