@@ -180,6 +180,10 @@ main {
     height: auto;
 }
 
+.project-icons > img:hover {
+    filter: invert(50%) sepia(58%) saturate(2125%) hue-rotate(347deg) brightness(102%) contrast(101%);
+}
+
 .announcements-grid {
     display: grid;
     grid-auto-rows: 1fr;
@@ -187,8 +191,16 @@ main {
 }
 
 .announcements-grid > :not(:last-child) {
-    padding-bottom: 10px;
     border-bottom: 1px var(--divider-line-color) solid;
+}
+
+.announcement {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.announcement:hover {
+    background-color: rgb(235, 235, 235);
 }
 
 .trending-grid {
